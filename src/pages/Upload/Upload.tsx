@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useState } from 'react';
 
 import Container from '../../components/Container/index.tsx';

@@ -1,0 +1,34 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          cname: xlzy520.cn
+          publish_dir: dist
+          commit_message: ${{ github.event.head_commit.message }}
+          # keep_files: false
+          force_orphan: true

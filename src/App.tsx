@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { Component, Fragment } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
