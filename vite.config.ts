@@ -7,6 +7,7 @@ import vitePluginImp from 'vite-plugin-imp'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/4class-jiali/',
   css: {
     preprocessorOptions: {
       less: {
