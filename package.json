@@ -8,11 +8,17 @@
   },
   "dependencies": {
     "airbnb-prop-types": "^2.13.2",
+    "ali-oss": "^6.15.2",
     "antd": "^4.16.6",
     "classnames": "^2.2.6",
+    "filepond": "^4.28.2",
+    "filepond-plugin-image-exif-orientation": "^1.0.11",
+    "filepond-plugin-image-preview": "^4.6.6",
+    "leancloud-storage": "^4.11.1",
     "react": "^17.0.0",
     "react-bnb-gallery": "^1.4.4",
     "react-dom": "^17.0.0",
+    "react-filepond": "^7.1.1",
     "react-router-dom": "^5.2.0",
     "react-sizeme": "^2.5.2",
     "sass": "^1.35.1"

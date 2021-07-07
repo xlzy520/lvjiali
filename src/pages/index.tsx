@@ -6,6 +6,7 @@ import Home from './Home';
 // import Examples from './Examples';
 import Upload from './Upload';
 // import Help from './Help';
+import Talk from './Talk';
 
 export default [{
   id: 'home',
@@ -41,11 +42,11 @@ export default [{
   isDefault: false,
   getComponent: () => <Upload />
 },
-// {
-//   id: 'help',
-//   title: 'Help',
-//   disabled: false,
-//   isDefault: false,
-//   getComponent: () => <Help />
-// }
+{
+  id: 'talk',
+  title: '想说的话',
+  disabled: false,
+  isDefault: false,
+  getComponent: () => <Talk />
+}
 ];

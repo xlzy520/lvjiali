@@ -1,6 +1,14 @@
-import React, { useState, useCallback } from 'react';
+// @ts-nocheck
+
+import React, { useState, useEffect, useCallback } from 'react';
 
 import ReactBnbGallery from 'react-bnb-gallery';
+
+import AV from 'leancloud-storage'
+
+import { HashRouter, Route, Switch, useHistory } from 'react-router-dom';
+
+import { OSSClient } from "../../utils/getOSS";
 
 import {
   Button,
@@ -13,6 +21,7 @@ import {
 
 import PHOTOS from '../../photos.js';
 
+
 const buttonCustomStyle = {
   marginTop: '16px',
   marginBottom: '24px',
@@ -24,12 +33,58 @@ const Home = () => {
     currentPhoto: null,
   });
 
+  const [photos, setPhotos] = useState([]);
+  const [number, setNumber] = useState(0);
+
+  useEffect(() => {
+    const query = new AV.Query('Photos');
+    // query.equalTo('lastName', 'Smith');
+    query.find().then((items) => {
+      let _items = items.map(v=> ({
+        src: v.attributes.url+'?x-oss-process=style/normal',
+        photo: v.attributes.url+'?x-oss-process=style/webp',
+        caption: "4班",
+        subcaption: "吕佳丽拍摄",
+        thumbnail: v.attributes.url+'?x-oss-process=style/thum',
+        // width: v.attributes.width,
+        // height: v.attributes.height
+      }))
+      // const _photos = photos.concat(_items)
+      //
+      //
+      // const newPhotos = _photos.map(v=> ({
+      //   src: v.photo,
+      //   photo: v?.photo+'?x-oss-process=style/normal',
+      //   caption: "4班",
+      //   subcaption: "吕佳丽拍摄",
+      //   thumbnail: v?.photo+'?x-oss-process=style/normal',
+      //   width: v.width,
+      //   height: v.height
+      // }))
+      // _items = _items.concat(_items).concat(_items)
+      setPhotos(_items)
+      // const _items = items.map(v=> v.attributes)
+
+      // students 是包含满足条件的 Student 对象的数组
+    });
+    // OSSClient.list().then(res => {
+    //   console.log(res);
+    // })
+
+  }, [])
+
   const onPhotoPress = useCallback((url) => {
+    console.log(photos, url);
+    let number = photos.findIndex(v=> v.src === url)
+    if (number < 0) {
+      number = 0
+    }
+    setNumber(number)
     setGalleryStatus({
       isOpen: true,
       currentPhoto: url,
     });
-  }, []);
+  }, [photos]);
 
   const onGalleryClose = useCallback(() => {
     setGalleryStatus({
@@ -40,12 +95,26 @@ const Home = () => {
 
   const isOpen = galleryStatus.isOpen;
 
-  const photosToShow = galleryStatus.currentPhoto || PHOTOS;
+  // setPhotos()
 
   const phrases = {
     showPhotoList: '显示照片列表',
     hidePhotoList: '隐藏照片列表'
   }
+
+  const history = useHistory()
+  const goUploadPage = () => {
+    history.push('upload')
+  }
+
+
+  const PhotoGridData = photos.map(v=> ({
+    src: v.photo,
+    width: 400,
+    height: 600,
+  }))
+
+  console.log(photos);
 
   return (
     <>
@@ -69,7 +138,7 @@ const Home = () => {
           <Spacing left={2}>
             <Button
               customStyle={buttonCustomStyle}
-              url="/#/upload"
+              onPress={goUploadPage}
               secondary
               outline
               large
@@ -79,12 +148,13 @@ const Home = () => {
           </Spacing>
         </Container>
       </Container>
-      <PhotoGrid onPhotoPress={onPhotoPress} />
+      <PhotoGrid onPhotoPress={onPhotoPress} photos={photos} />
       <ReactBnbGallery
         show={isOpen}
-        photos={photosToShow}
+        photos={photos}
         onClose={onGalleryClose}
         phrases={phrases}
+        activePhotoIndex={number}
         wrap={false}
         backgroundColor='#000000'
       />

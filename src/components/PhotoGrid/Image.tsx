@@ -17,7 +17,7 @@ const propTypes = {
 
 const defaultProps = {
   src: null,
-  width: 100,
+  width: 160,
   height: 100,
   onPress: () => {},
   columnSize: 100,
@@ -26,6 +26,7 @@ const defaultProps = {
 class Image extends PureComponent {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       loading: true,
     };
@@ -97,6 +98,7 @@ class Image extends PureComponent {
             src={src}
             width={width}
             height={height}
+            loading="lazy"
             onLoad={this.onLoad}
           />
         </div>

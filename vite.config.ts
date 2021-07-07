@@ -8,6 +8,14 @@ import vitePluginImp from 'vite-plugin-imp'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/4class-jiali/',
+  server: {
+    open: true,
+    port: 9927,
+  },
+  build: {
+    minify: true,
+    brotliSize: false,
+  },
   css: {
     preprocessorOptions: {
       less: {

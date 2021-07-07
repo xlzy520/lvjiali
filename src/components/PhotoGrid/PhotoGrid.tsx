@@ -7,7 +7,7 @@ import { withSize } from 'react-sizeme'
 
 import Image from './Image.tsx';
 
-import photos from './photos';
+// import photos from './photos';
 
 const propTypes = {
   photosPerColumn: PropTypes.number,
@@ -29,12 +29,14 @@ class PhotoGrid extends PureComponent {
     const {
       size,
       photosPerColumn,
+      photos
     } = this.props;
 
-    this.columnWidth = size.width / (photos.length / photosPerColumn);
+    this.columnWidth = 160;
   }
 
   renderColumns() {
+    const { photos, } = this.props;
     let columns = [];
     let index = 0;
     let current = 1;
@@ -46,7 +48,7 @@ class PhotoGrid extends PureComponent {
       columns[index].push(
         this.renderPhoto(photo)
       );
-      if (current < 3) {
+      if (current < 1) {
         current++;
       }
       else {
@@ -66,9 +68,9 @@ class PhotoGrid extends PureComponent {
     return (
       <Image
         key={photo.src}
+        src={photo.src}
         onPress={onPhotoPress}
         columnSize={this.columnWidth}
-        {...photo}
       />
     );
   }

@@ -1,17 +1,22 @@
 // @ts-nocheck
 
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Container from '../Container';
 import GitHubButton from '../GitHubButton';
 
 import sections from '../../pages';
 
+
 import { ReactComponent as Logo } from './logo.svg'
 
-class Header extends Component {
-  renderMenu() {
+const Header = () => {
+  const location = useLocation()
+
+  console.log(location.hash);
+  const renderMenu =()=> {
+
     const items = sections.map(section => {
       if (!section.disabled) {
         return (
@@ -32,29 +37,26 @@ class Header extends Component {
       </ul>
     );
   }
-
-  render() {
-    return (
-      <header className="header">
-        <Container className="header__container">
-          <div className="header__content">
-            <div className="header__brand">
-              <Logo />
-            </div>
-            <nav className="navigation">
-              {this.renderMenu()}
-            </nav>
-            <div className="right">
-              {/*<GitHubButton*/}
-              {/*  user="jiali0126"*/}
-              {/*  repo="react-bnb-gallery"*/}
-              {/*/>*/}
-            </div>
+  return (
+    <header className="header">
+      <Container className="header__container">
+        <div className="header__content">
+          <div className="header__brand">
+            <Logo />
           </div>
-        </Container>
-      </header>
-    );
-  }
+          <nav className="navigation">
+            {renderMenu()}
+          </nav>
+          <div className="right">
+            {/*<GitHubButton*/}
+            {/*  user="jiali0126"*/}
+            {/*  repo="react-bnb-gallery"*/}
+            {/*/>*/}
+          </div>
+        </div>
+      </Container>
+    </header>
+  );
 }
 
 export default Header;

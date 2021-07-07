@@ -6,6 +6,16 @@ import App from './App'
 
 import 'react-bnb-gallery/dist/style.css'
 
+
+import AV from 'leancloud-storage'
+// Init Leancloud
+// window.AV = AV
+AV.init({
+  appId: 'ALiFTYngIaFGwwEj9VCT4n9l-gzGzoHsz',
+  appKey: 'mCYfe3LBckRUxPoGdXKR08mv',
+  serverURLs: 'https://aliftyng.lc-cn-n1-shared.com'
+})
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
