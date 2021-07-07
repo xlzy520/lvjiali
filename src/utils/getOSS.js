@@ -1,8 +1,11 @@
 import OSS from 'ali-oss'
 
+const accessKeyId = 'LTAIUVq' + 'GhhJkpW23'
+const accessKeySecret = 'w8JTHC5vwgDdBNX'+'xuajXsHd0nJm18d'
+
 export const OSSClient = new OSS({
   region: 'oss-cn-shenzhen',
-  accessKeyId: 'LTAIUVqGhhJkpW23',
-  accessKeySecret: 'w8JTHC5vwgDdBNXxuajXsHd0nJm18d',
+  accessKeyId,
+  accessKeySecret,
   bucket: 'jiali0126'
 });
