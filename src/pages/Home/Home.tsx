@@ -2,9 +2,11 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 
-import ReactBnbGallery from 'react-bnb-gallery';
+import ReactBnbGallery from 'react-bnb-gallery-lodash-es';
 
-import AV from 'leancloud-storage'
+// import AV from 'leancloud-storage'
+
+const AV = window.AV
 
 import { HashRouter, Route, Switch, useHistory } from 'react-router-dom';
 

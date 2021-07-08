@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 
-import AV from 'leancloud-storage'
+// import AV from 'leancloud-storage'
+const AV = window.AV
+
 
 import Container from '../../components/Container/index.tsx';
 import Button from '../../components/Button/index.tsx';

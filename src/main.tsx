@@ -1,15 +1,17 @@
+// @ts-nocheck
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import './assets/main.scss';
 import App from './App'
 
-import 'react-bnb-gallery/dist/style.css'
+import 'react-bnb-gallery-lodash-es/dist/style.css'
 
 
-import AV from 'leancloud-storage'
+// import AV from 'leancloud-storage'
 // Init Leancloud
-// window.AV = AV
+const AV = window.AV
 AV.init({
   appId: 'ALiFTYngIaFGwwEj9VCT4n9l-gzGzoHsz',
   appKey: 'mCYfe3LBckRUxPoGdXKR08mv',

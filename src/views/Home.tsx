@@ -1,7 +1,7 @@
 import HeaderOld from '../components/Header'
 
 import React, { useState } from 'react';
-import ReactBnbGallery from 'react-bnb-gallery';
+import ReactBnbGallery from 'react-bnb-gallery-lodash-es';
 
 const PHOTOS = [
   {

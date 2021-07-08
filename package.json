@@ -1,6 +1,7 @@
 {
-  "name": "vite-react-tailwind-starter",
-  "version": "0.0.0",
+  "name": "class4-jiali",
+  "version": "1.0.0",
+  "description": "博爱学校4班同学照——by 佳丽",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -8,20 +9,16 @@
   },
   "dependencies": {
     "airbnb-prop-types": "^2.13.2",
-    "ali-oss": "^6.15.2",
-    "antd": "^4.16.6",
     "classnames": "^2.2.6",
     "filepond": "^4.28.2",
     "filepond-plugin-image-exif-orientation": "^1.0.11",
     "filepond-plugin-image-preview": "^4.6.6",
-    "leancloud-storage": "^4.11.1",
     "react": "^17.0.0",
-    "react-bnb-gallery": "^1.4.4",
+    "react-bnb-gallery-lodash-es": "^1.4.4",
     "react-dom": "^17.0.0",
     "react-filepond": "^7.1.1",
     "react-router-dom": "^5.2.0",
-    "react-sizeme": "^2.5.2",
-    "sass": "^1.35.1"
+    "react-sizeme": "^2.5.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
@@ -31,6 +28,8 @@
     "autoprefixer": "^10.2.6",
     "less": "^4.1.1",
     "postcss": "^8.3.5",
+    "rollup-plugin-visualizer": "^5.5.1",
+    "sass": "^1.35.1",
     "tailwindcss": "^2.2.4",
     "typescript": "^4.3.2",
     "vite": "^2.3.8",

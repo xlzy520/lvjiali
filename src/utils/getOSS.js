@@ -1,4 +1,6 @@
-import OSS from 'ali-oss'
+// import OSS from 'ali-oss'
+
+const OSS = window.OSS
 
 const accessKeyId = 'LTAIUVq' + 'GhhJkpW23'
 const accessKeySecret = 'w8JTHC5vwgDdBNX'+'xuajXsHd0nJm18d'
