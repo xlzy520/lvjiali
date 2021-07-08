@@ -24,7 +24,7 @@ const htmlPlugin = () => {
     apply: 'build',
     transformIndexHtml(html) {
       return replace(html, {
-        publicPath: 'https://cdn.jsdelivr.net/gh/xlzy520/4class-jiali/@gh-pages/',
+        publicPath: 'https://cdn.jsdelivr.net/gh/xlzy520/4class-jiali@gh-pages',
         tags: ['src', 'href'],
         id: '\/4class-jiali'
       })
