@@ -4,13 +4,15 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 import ReactBnbGallery from 'react-bnb-gallery-lodash-es';
 
+import ParticleEffectButton from 'react-particle-effect-button'
+
 // import AV from 'leancloud-storage'
 
 const AV = window.AV
 
-import { HashRouter, Route, Switch, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-import { OSSClient } from "../../utils/getOSS";
+// import { OSSClient } from "../../utils/getOSS";
 
 import {
   Button,
@@ -21,7 +23,7 @@ import {
   PhotoGrid,
 } from '../../components';
 
-import PHOTOS from '../../photos.js';
+// import PHOTOS from '../../photos.js';
 
 
 const buttonCustomStyle = {
@@ -37,6 +39,11 @@ const Home = () => {
 
   const [photos, setPhotos] = useState([]);
   const [number, setNumber] = useState(0);
+  const [ButtonState, setButtonState] = useState({
+    hidden: false,
+    animating: false
+  });
+
 
   useEffect(() => {
     const query = new AV.Query('Photos');
@@ -95,6 +102,22 @@ const Home = () => {
     });
   }, []);
 
+
+  const onCommentClick = useCallback(() => {
+    setButtonState({
+      hidden: !ButtonState.hidden,
+    });
+  }, []);
+
+
+  const onAnimationComplete = useCallback(() => {
+    history.push('talk')
+  }, []);
+
+
+
+
+
   const isOpen = galleryStatus.isOpen;
 
   // setPhotos()
@@ -116,6 +139,14 @@ const Home = () => {
     height: 600,
   }))
 
+  const buttonOptions = {
+    type: 'triangle',
+    easing: 'easeOutQuart',
+    size: 6,
+    particlesAmountCoefficient: 4,
+    oscillationCoefficient: 2
+  }
+
   console.log(photos);
 
   return (
@@ -130,7 +161,7 @@ const Home = () => {
                 isOpen: true,
                 currentPhoto: null,
               })}
-              customStyle={buttonCustomStyle}
+              className="mt-4 mb-6"
               primary
               large
             >
@@ -139,7 +170,7 @@ const Home = () => {
           </Spacing>
           <Spacing left={2}>
             <Button
-              customStyle={buttonCustomStyle}
+              className="mt-4 mb-6"
               onPress={goUploadPage}
               secondary
               outline
@@ -148,18 +179,35 @@ const Home = () => {
               上传我们的照片
               </Button>
           </Spacing>
+          <Spacing left={2}>
+            <ParticleEffectButton
+              hidden={ButtonState.hidden}
+              color='#fa709a'
+              duration="500"
+              onComplete={onAnimationComplete}
+              {...buttonOptions}
+            >
+              <button
+                className="particle-effect-button mt-4 mb-6
+                button button__default button__large button__primary button__comment"
+                onClick={onCommentClick}
+              >
+                留言
+              </button>
+            </ParticleEffectButton>
+          </Spacing>
         </Container>
       </Container>
-      <PhotoGrid onPhotoPress={onPhotoPress} photos={photos} />
-      <ReactBnbGallery
-        show={isOpen}
-        photos={photos}
-        onClose={onGalleryClose}
-        phrases={phrases}
-        activePhotoIndex={number}
-        wrap={false}
-        backgroundColor='#000000'
-      />
+      {/*<PhotoGrid onPhotoPress={onPhotoPress} photos={photos} />*/}
+      {/*<ReactBnbGallery*/}
+      {/*  show={isOpen}*/}
+      {/*  photos={photos}*/}
+      {/*  onClose={onGalleryClose}*/}
+      {/*  phrases={phrases}*/}
+      {/*  activePhotoIndex={number}*/}
+      {/*  wrap={false}*/}
+      {/*  backgroundColor='#000000'*/}
+      {/*/>*/}
     </>
   );
 };

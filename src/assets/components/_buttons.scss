@@ -55,13 +55,13 @@
     color: $btn-primary-color;
     background-color: $btn-primary-background;
     border-color: $btn-primary-border;
-  
+
     &:hover {
       color: $btn-primary-hover-color;
       background-color: $btn-primary-hover-background;
       border-color: $btn-primary-hover-border;
     }
-  
+
     &.button__outline {
       color: $btn-primary-outline-color;
       background-color: $btn-primary-outline-background;
@@ -96,6 +96,17 @@
         background-color: $btn-secondary-outline-hover-background;
         border-color: $btn-secondary-outline-hover-border;
       }
+    }
+  }
+  &.button__comment {
+    color: $btn-primary-color;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    border-color: $btn-primary-color;
+
+    &:hover {
+      color: $btn-secondary-hover-color;
+      background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+      border-color: $btn-primary-color;
     }
   }
 }

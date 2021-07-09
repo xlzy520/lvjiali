@@ -7,6 +7,7 @@ const propTypes = forbidExtraProps({
   children: PropTypes.node.isRequired,
   url: PropTypes.string,
   customStyle: PropTypes.object,
+  className: PropTypes.string,
   large: PropTypes.bool,
   normal: PropTypes.bool,
   onPress: PropTypes.func,
@@ -20,6 +21,7 @@ const propTypes = forbidExtraProps({
 const defaultProps = {
   url: null,
   customStyle: null,
+  className: "",
   large: false,
   normal: true,
   onPress: () => {},
@@ -40,7 +42,7 @@ const Button = ({
   primary,
   small,
   secondary,
-  outline,
+  outline, className,
   block,
 }) => {
   let ComponentName, props = {};
@@ -53,7 +55,7 @@ const Button = ({
 
   return (
     <ComponentName {...props} className={classnames(
-      'button',
+      'button', className,
       // sizing
       (normal && (!primary || !secondary)) && 'button__default',
       small && 'button__small',

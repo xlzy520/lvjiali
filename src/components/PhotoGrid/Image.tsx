@@ -26,7 +26,6 @@ const defaultProps = {
 class Image extends PureComponent {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       loading: true,
     };

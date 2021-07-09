@@ -17,6 +17,7 @@
     "react-bnb-gallery-lodash-es": "^1.4.4",
     "react-dom": "^17.0.0",
     "react-filepond": "^7.1.1",
+    "react-particle-effect-button": "^1.0.1",
     "react-router-dom": "^5.2.0",
     "react-sizeme": "^2.5.2"
   },
