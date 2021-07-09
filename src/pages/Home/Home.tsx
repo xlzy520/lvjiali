@@ -198,16 +198,16 @@ const Home = () => {
           </Spacing>
         </Container>
       </Container>
-      {/*<PhotoGrid onPhotoPress={onPhotoPress} photos={photos} />*/}
-      {/*<ReactBnbGallery*/}
-      {/*  show={isOpen}*/}
-      {/*  photos={photos}*/}
-      {/*  onClose={onGalleryClose}*/}
-      {/*  phrases={phrases}*/}
-      {/*  activePhotoIndex={number}*/}
-      {/*  wrap={false}*/}
-      {/*  backgroundColor='#000000'*/}
-      {/*/>*/}
+      <PhotoGrid onPhotoPress={onPhotoPress} photos={photos} />
+      <ReactBnbGallery
+        show={isOpen}
+        photos={photos}
+        onClose={onGalleryClose}
+        phrases={phrases}
+        activePhotoIndex={number}
+        wrap={false}
+        backgroundColor='#000000'
+      />
     </>
   );
 };
