@@ -61,8 +61,13 @@
           text-decoration: none;
           color: #999999;
 
+          &.selected{
+            color: #fa709a;
+            border-bottom: 2px solid #fa709a;
+          }
+
           &:hover {
-            color: #111111;
+            color: #fa89af;
           }
         }
       }

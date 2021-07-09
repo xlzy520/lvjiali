@@ -1,10 +1,10 @@
 // @ts-nocheck
 
-import React, { Component } from 'react';
-import { Link, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation, useParams } from "react-router-dom";
 
 import Container from '../Container';
-import GitHubButton from '../GitHubButton';
+// import GitHubButton from '../GitHubButton';
 
 import sections from '../../pages';
 
@@ -12,18 +12,19 @@ import sections from '../../pages';
 import { ReactComponent as Logo } from './logo.svg'
 
 const Header = () => {
+  const [activeNav, setActiveNav] = useState('/home');
   const location = useLocation()
 
-  console.log(location.hash);
+  console.log(location, sections, useParams());
   const renderMenu =()=> {
 
     const items = sections.map(section => {
       if (!section.disabled) {
         return (
           <li key={section.id}>
-            <Link to={section.id}>
+            <NavLink to={section.id} activeClassName="selected">
               {section.title}
-            </Link>
+            </NavLink>
           </li>
         );
       } else {
