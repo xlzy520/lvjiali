@@ -1,40 +1,10 @@
-# Vite + React + Tailwind CSS starter
+# 佳丽的班级同学照片墙
 
-Inspired by [posva's](https://github.com/posva) [vite-tailwind-starter](https://github.com/posva/vite-tailwind-starter)
+教佳丽学习web开发，顺便做的
 
-Note if you have access to [Tailwind UI](https://tailwindui.com), you can follow the following steps to add it:
 
-1. Install `@tailwindcss/ui`:
-
-```sh
-yarn add @tailwindcss/ui
-```
-
-2. Add the plugin in `tailwind.config.js` without changing anything else:
-
-```js
-// tailwind.config.js
-module.exports = {
-  // ...
-  // rest of the config
-  plugins: [require('@tailwindcss/ui')],
-}
-```
-
-## Installation
-
-```sh
-yarn
-```
-
-## Development
-
-```sh
-yarn dev
-```
-
-## Build
-
-```sh
-yarn build
-```
+### Tips
+1. 本地调试照片墙插件
+   ```json
+   "react-bnb-gallery-lodash-es": "../react-bnb-gallery",   
+   ```
