@@ -14,7 +14,7 @@ specifiers:
   less: ^4.1.1
   postcss: ^8.3.5
   react: ^17.0.0
-  react-bnb-gallery-lodash-es: ^1.4.4
+  react-bnb-gallery-lodash-es: ^1.4.5
   react-dom: ^17.0.0
   react-filepond: ^7.1.1
   react-particle-effect-button: ^1.0.1
@@ -36,7 +36,7 @@ dependencies:
   filepond-plugin-image-exif-orientation: registry.nlark.com/filepond-plugin-image-exif-orientation/1.0.11_filepond@4.28.2
   filepond-plugin-image-preview: registry.nlark.com/filepond-plugin-image-preview/4.6.6_filepond@4.28.2
   react: registry.nlark.com/react/17.0.2
-  react-bnb-gallery-lodash-es: 1.4.4_react-dom@17.0.2+react@17.0.2
+  react-bnb-gallery-lodash-es: 1.4.5_react-dom@17.0.2+react@17.0.2
   react-dom: registry.nlark.com/react-dom/17.0.2_react@17.0.2
   react-filepond: registry.nlark.com/react-filepond/7.1.1_ddbdf739a60f75182525d9e332196a2a
   react-particle-effect-button: registry.nlark.com/react-particle-effect-button/1.0.1_react-dom@17.0.2+react@17.0.2
@@ -800,6 +800,7 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=, tarball: lodash/download/lodash-4.17.21.tgz}
+    dev: true
 
   /loose-envify/1.4.0:
     resolution: {integrity: sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=, tarball: loose-envify/download/loose-envify-1.4.0.tgz}
@@ -1100,8 +1101,8 @@ packages:
       performance-now: 2.1.0
     dev: false
 
-  /react-bnb-gallery-lodash-es/1.4.4_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-r45MpcCDT0Ovc2rSKWpFU9P7LKVmCETF3u7E5EmBOz5xM1dPM9wSrRcUGDkPEqjYpaLkQxKhVnN2YAyRv7x39g==}
+  /react-bnb-gallery-lodash-es/1.4.5_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-xYBUJ+HBDMsp5MYW4uOs9i2nP2Ck33uDhQ8kxr/GuJbBGELDE0h8M5BslBqwno4Ku4WC6w36BGJjSYh3jcxgxg==}
     peerDependencies:
       react: ^15.0.0 || ^16.0.0
       react-dom: ^15.0.0 || ^16.0.0
@@ -1110,7 +1111,6 @@ packages:
       ajv: 6.12.6
       classnames: 2.3.1
       focus-trap-react: 7.0.1_9bdd65c2b60ce8638444b80b396a481b
-      lodash: 4.17.21
       lodash-es: 4.17.21
       object.assign: 4.1.2
       object.values: 1.1.4
