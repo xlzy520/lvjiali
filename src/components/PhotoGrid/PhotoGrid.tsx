@@ -7,6 +7,8 @@ import { withSize } from 'react-sizeme'
 
 import Image from './Image.tsx';
 
+import Masonry from "react-masonry-css";
+
 // import photos from './photos';
 
 const propTypes = {
@@ -22,42 +24,15 @@ const defaultProps = {
 class PhotoGrid extends PureComponent {
   constructor(props) {
     super(props);
-    this.getColumnWidth();
   }
 
-  getColumnWidth() {
-    const {
-      size,
-      photosPerColumn,
-      photos
-    } = this.props;
-
-    this.columnWidth = 160;
-  }
-
-  renderColumns() {
-    const { photos, } = this.props;
-    let columns = [];
-    let index = 0;
-    let current = 1;
-
-    photos.forEach(photo => {
-      if (!columns[index]) {
-        columns[index] = [];
-      }
-      columns[index].push(
-        this.renderPhoto(photo)
-      );
-      if (current < 1) {
-        current++;
-      }
-      else {
-        current = 1;
-        index++;
-      }
-    });
-
-    return columns;
+  state = {
+    breakpointColumnsObj: {
+      default: 8,
+      1100: 3,
+      700: 2,
+      500: 1
+    }
   }
 
   renderPhoto(photo) {
@@ -67,27 +42,27 @@ class PhotoGrid extends PureComponent {
 
     return (
       <Image
+        {...photo}
         key={photo.src}
         src={photo.src}
         onPress={onPhotoPress}
-        columnSize={this.columnWidth}
       />
     );
   }
 
   render() {
-    const columns = this.renderColumns();
+    const { photos, } = this.props;
+    // const columns = this.renderColumns();
 
     return (
-      <div className="grid-container">
-        <div className="grid">
-          {columns.map((column, index) => (
-            <div key={`.column${index}`} className="column">
-              {column}
-            </div>
-          ))}
-        </div>
-      </div>
+      <Masonry
+        breakpointCols={this.state.breakpointColumnsObj}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+        columnAttrs={{ className: 'should be overridden', 'data-test': '', style: { '--test': 'test' }}}
+      >
+        {photos.map(v=> this.renderPhoto(v))}
+      </Masonry>
     );
   }
 }

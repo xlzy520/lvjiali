@@ -17,10 +17,7 @@ const propTypes = {
 
 const defaultProps = {
   src: null,
-  width: 160,
-  height: 100,
   onPress: () => {},
-  columnSize: 100,
 };
 
 class Image extends PureComponent {
@@ -48,60 +45,25 @@ class Image extends PureComponent {
     });
   }
 
-  getRelativeHeight() {
-    const {
-      width,
-      height,
-      columnSize,
-    } = this.props;
-
-    return getHeightWithProportion(height, width, columnSize) - 8;
-  }
-
   render() {
     const {
       src,
-      width,
-      height,
+     'data-src': dataSrc
     } = this.props;
 
     const {
       loading,
     } = this.state;
 
-    const relativeHeight = this.getRelativeHeight();
-
     return (
-      <figure
-        className={classnames(
-          'picture',
-          loading && 'loading',
-          !loading && 'loaded',
-        )}
+      <img
+        alt=''
+        src={src}
+        data-src={dataSrc}
+        loading="lazy"
+        onLoad={this.onLoad}
         onClick={this.onClick}
-        style={{
-          width,
-          height,
-          minHeight: relativeHeight,
-          maxHeight: relativeHeight,
-        }}
-      >
-        <div
-          className="bg"
-          style={{
-            backgroundImage: `url(${src})`
-          }}
-        >
-          <img
-            alt=''
-            src={src}
-            width={width}
-            height={height}
-            loading="lazy"
-            onLoad={this.onLoad}
-          />
-        </div>
-      </figure>
+      />
     );
   }
 }
