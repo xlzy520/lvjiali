@@ -1,34 +1,7 @@
 // @ts-nocheck
 
 import React, { Component, Fragment } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-
-
-// import Nav from './components/Nav'
-
-// import Home from './views/Home'
-// import About from './views/About'
-// import NotFound from './views/NotFound'
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <Nav />
-//       <Switch>
-//         <Route exact path="/">
-//           <Home />
-//         </Route>
-//         <Route path="/about">
-//           <About />
-//         </Route>
-//         <Route>
-//           <NotFound />
-//         </Route>
-//       </Switch>
-//     </Router>
-//   );
-// };
-
+import { HashRouter, Route } from 'react-router-dom';
 
 import pages from './pages/index.tsx';
 

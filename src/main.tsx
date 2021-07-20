@@ -6,9 +6,6 @@ import './index.css'
 import './assets/main.scss';
 import App from './App'
 
-import 'react-bnb-gallery-lodash-es/dist/style.css'
-
-
 // import AV from 'leancloud-storage'
 // Init Leancloud
 const AV = window.AV
