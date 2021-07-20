@@ -14,14 +14,12 @@ specifiers:
   less: ^4.1.1
   postcss: ^8.3.5
   react: ^17.0.0
-  react-bnb-gallery-lodash-es: ^1.4.5
   react-dom: ^17.0.0
   react-filepond: ^7.1.1
   react-masonry-css: ^1.0.16
   react-particle-effect-button: ^1.0.1
   react-router-dom: ^5.2.0
   react-sizeme: ^2.5.2
-  react-viewer: ^3.2.2
   rollup-plugin-visualizer: ^5.5.1
   sass: ^1.35.1
   tailwindcss: ^2.2.4
@@ -33,20 +31,17 @@ specifiers:
   vite-plugin-svgr: ^0.3.0
 
 dependencies:
-  airbnb-prop-types: registry.nlark.com/airbnb-prop-types/2.16.0_react@17.0.2
   classnames: 2.3.1
   filepond: registry.nlark.com/filepond/4.28.2
   filepond-plugin-image-exif-orientation: registry.nlark.com/filepond-plugin-image-exif-orientation/1.0.11_filepond@4.28.2
   filepond-plugin-image-preview: registry.nlark.com/filepond-plugin-image-preview/4.6.6_filepond@4.28.2
   react: registry.nlark.com/react/17.0.2
-  react-bnb-gallery-lodash-es: 1.4.5_react-dom@17.0.2+react@17.0.2
   react-dom: registry.nlark.com/react-dom/17.0.2_react@17.0.2
   react-filepond: registry.nlark.com/react-filepond/7.1.1_ddbdf739a60f75182525d9e332196a2a
   react-masonry-css: registry.nlark.com/react-masonry-css/1.0.16_react@17.0.2
   react-particle-effect-button: registry.nlark.com/react-particle-effect-button/1.0.1_react-dom@17.0.2+react@17.0.2
   react-router-dom: registry.nlark.com/react-router-dom/5.2.0_react@17.0.2
   react-sizeme: registry.nlark.com/react-sizeme/2.6.12_react-dom@17.0.2+react@17.0.2
-  react-viewer: registry.nlark.com/react-viewer/3.2.2
   viewerjs: registry.nlark.com/viewerjs/1.10.0
 
 devDependencies:
@@ -54,6 +49,7 @@ devDependencies:
   '@types/react-dom': registry.nlark.com/@types/react-dom/17.0.8
   '@types/react-router-dom': registry.nlark.com/@types/react-router-dom/5.1.7
   '@vitejs/plugin-react-refresh': registry.nlark.com/@vitejs/plugin-react-refresh/1.3.5
+  airbnb-prop-types: registry.nlark.com/airbnb-prop-types/2.16.0_react@17.0.2
   autoprefixer: registry.nlark.com/autoprefixer/10.2.6_postcss@8.3.5
   less: 4.1.1
   postcss: registry.nlark.com/postcss/8.3.5
@@ -179,32 +175,6 @@ packages:
       xtend: 4.0.2
     dev: true
 
-  /airbnb-prop-types/2.16.0_react@17.0.2:
-    resolution: {integrity: sha512-7WHOFolP/6cS96PhKNrslCLMYAI8yB1Pp6u6XmxozQOiZbsI5ycglZr5cHhBFfuRcQQjzCMith5ZPZdYiJCxUg==}
-    peerDependencies:
-      react: ^0.14 || ^15.0.0 || ^16.0.0-alpha
-    dependencies:
-      array.prototype.find: 2.1.1
-      function.prototype.name: 1.1.4
-      is-regex: 1.1.3
-      object-is: 1.1.5
-      object.assign: 4.1.2
-      object.entries: 1.1.4
-      prop-types: 15.7.2
-      prop-types-exact: 1.2.0
-      react: registry.nlark.com/react/17.0.2
-      react-is: 16.13.1
-    dev: false
-
-  /ajv/6.12.6:
-    resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
-    dependencies:
-      fast-deep-equal: 3.1.3
-      fast-json-stable-stringify: 2.1.0
-      json-schema-traverse: 0.4.1
-      uri-js: 4.4.1
-    dev: false
-
   /ansi-regex/5.0.0:
     resolution: {integrity: sha1-OIU59VF5vzkznIGvMKZU1p+Hy3U=, tarball: ansi-regex/download/ansi-regex-5.0.0.tgz?cache=0&sync_timestamp=1618554239243&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fansi-regex%2Fdownload%2Fansi-regex-5.0.0.tgz}
     engines: {node: '>=8'}
@@ -221,13 +191,6 @@ packages:
   /arg/5.0.0:
     resolution: {integrity: sha1-og4rtXEOgpUKUWs/kz/uXtR4vpA=, tarball: arg/download/arg-5.0.0.tgz}
     dev: true
-
-  /array.prototype.find/2.1.1:
-    resolution: {integrity: sha512-mi+MYNJYLTx2eNYy+Yh6raoQacCsNeeMUaspFPh9Y141lFSsWxxB8V9mM2ye+eqiRs917J6/pJ4M9ZPzenWckA==}
-    dependencies:
-      define-properties: 1.1.3
-      es-abstract: 1.18.3
-    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: balanced-match/download/balanced-match-1.0.2.tgz}
@@ -266,7 +229,7 @@ packages:
     dependencies:
       function-bind: 1.1.1
       get-intrinsic: 1.1.1
-    dev: false
+    dev: true
 
   /callsites/3.1.0:
     resolution: {integrity: sha1-s2MKvYlDQy9Us/BRkjjjPNffL3M=, tarball: callsites/download/callsites-3.1.0.tgz}
@@ -402,7 +365,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       object-keys: 1.1.1
-    dev: false
+    dev: true
 
   /defined/1.0.0:
     resolution: {integrity: sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=, tarball: defined/download/defined-1.0.0.tgz}
@@ -447,28 +410,6 @@ packages:
       is-arrayish: 0.2.1
     dev: true
 
-  /es-abstract/1.18.3:
-    resolution: {integrity: sha512-nQIr12dxV7SSxE6r6f1l3DtAeEYdsGpps13dR0TwJg1S8gyp4ZPgy3FZcHBgbiQqnoqSTb+oC+kO4UQ0C/J8vw==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      call-bind: 1.0.2
-      es-to-primitive: 1.2.1
-      function-bind: 1.1.1
-      get-intrinsic: 1.1.1
-      has: 1.0.3
-      has-symbols: 1.0.2
-      is-callable: 1.2.3
-      is-negative-zero: 2.0.1
-      is-regex: 1.1.3
-      is-string: 1.0.6
-      object-inspect: 1.10.3
-      object-keys: 1.1.1
-      object.assign: 4.1.2
-      string.prototype.trimend: 1.0.4
-      string.prototype.trimstart: 1.0.4
-      unbox-primitive: 1.0.1
-    dev: false
-
   /es-to-primitive/1.2.1:
     resolution: {integrity: sha1-5VzUyc3BiLzvsDs2bHNjI/xciYo=, tarball: es-to-primitive/download/es-to-primitive-1.2.1.tgz}
     engines: {node: '>= 0.4'}
@@ -476,7 +417,7 @@ packages:
       is-callable: 1.2.3
       is-date-object: registry.nlark.com/is-date-object/1.0.4
       is-symbol: registry.nlark.com/is-symbol/1.0.4
-    dev: false
+    dev: true
 
   /escalade/3.1.1:
     resolution: {integrity: sha1-2M/ccACWXFoBdLSoLqpcBVJ0LkA=, tarball: escalade/download/escalade-3.1.1.tgz}
@@ -492,40 +433,12 @@ packages:
     resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, tarball: estree-walker/download/estree-walker-2.0.2.tgz}
     dev: true
 
-  /fast-deep-equal/3.1.3:
-    resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
-    dev: false
-
-  /fast-json-stable-stringify/2.1.0:
-    resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
-    dev: false
-
   /fill-range/7.0.1:
     resolution: {integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=, tarball: fill-range/download/fill-range-7.0.1.tgz}
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: 5.0.1
     dev: true
-
-  /focus-trap-react/7.0.1_9bdd65c2b60ce8638444b80b396a481b:
-    resolution: {integrity: sha512-12TxHtVntj/sCsT3bwB3pPK+3rACMFLO7LBfk4nKrw1HERRmO/oc0+woD9vZKffxo5zkxkz9amc9rou9reVnpA==}
-    peerDependencies:
-      prop-types: ^15.7.2
-      react: ^16.0.0
-      react-dom: ^16.0.0
-    dependencies:
-      focus-trap: 5.1.0
-      prop-types: 15.7.2
-      react: registry.nlark.com/react/17.0.2
-      react-dom: registry.nlark.com/react-dom/17.0.2_react@17.0.2
-    dev: false
-
-  /focus-trap/5.1.0:
-    resolution: {integrity: sha512-CkB/nrO55069QAUjWFBpX6oc+9V90Qhgpe6fBWApzruMq5gnlh90Oo7iSSDK7pKiV5ugG6OY2AXM5mxcmL3lwQ==}
-    dependencies:
-      tabbable: 4.0.0
-      xtend: 4.0.2
-    dev: false
 
   /fs.realpath/1.0.0:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, tarball: fs.realpath/download/fs.realpath-1.0.0.tgz}
@@ -540,20 +453,7 @@ packages:
 
   /function-bind/1.1.1:
     resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, tarball: function-bind/download/function-bind-1.1.1.tgz}
-
-  /function.prototype.name/1.1.4:
-    resolution: {integrity: sha512-iqy1pIotY/RmhdFZygSSlW0wko2yxkSCKqsuv4pr8QESohpYyG/Z7B/XXvPRKTJS//960rgguE5mSRUsDdaJrQ==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      call-bind: 1.0.2
-      define-properties: 1.1.3
-      es-abstract: 1.18.3
-      functions-have-names: 1.2.2
-    dev: false
-
-  /functions-have-names/1.2.2:
-    resolution: {integrity: sha512-bLgc3asbWdwPbx2mNk2S49kmJCuQeu0nfmaOgbs8WIyzzkw3r4htszdIi9Q9EMezDPTYuJx2wvjZ/EwgAthpnA==}
-    dev: false
+    dev: true
 
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha1-MqbudsPX9S1GsrGuXZP+qFgKJeA=, tarball: gensync/download/gensync-1.0.0-beta.2.tgz}
@@ -571,7 +471,7 @@ packages:
       function-bind: 1.1.1
       has: 1.0.3
       has-symbols: 1.0.2
-    dev: false
+    dev: true
 
   /graceful-fs/4.2.6:
     resolution: {integrity: sha1-/wQLKwhTsjw9MQJ1I3BvGIXXa+4=, tarball: graceful-fs/download/graceful-fs-4.2.6.tgz}
@@ -579,7 +479,7 @@ packages:
 
   /has-bigints/1.0.1:
     resolution: {integrity: sha1-ZP5qywIGc+O3jbA1pa9pqp0HsRM=, tarball: has-bigints/download/has-bigints-1.0.1.tgz?cache=0&sync_timestamp=1615461893278&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhas-bigints%2Fdownload%2Fhas-bigints-1.0.1.tgz}
-    dev: false
+    dev: true
 
   /has-flag/3.0.0:
     resolution: {integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=, tarball: has-flag/download/has-flag-3.0.0.tgz?cache=0&sync_timestamp=1618559697170&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhas-flag%2Fdownload%2Fhas-flag-3.0.0.tgz}
@@ -594,13 +494,14 @@ packages:
   /has-symbols/1.0.2:
     resolution: {integrity: sha1-Fl0wcMADCXUqEjakeTMeOsVvFCM=, tarball: has-symbols/download/has-symbols-1.0.2.tgz}
     engines: {node: '>= 0.4'}
-    dev: false
+    dev: true
 
   /has/1.0.3:
     resolution: {integrity: sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=, tarball: has/download/has-1.0.3.tgz}
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+    dev: true
 
   /header-case/2.0.4:
     resolution: {integrity: sha1-WkLmO1UXc0nPQFvrjXdayruSwGM=, tarball: header-case/download/header-case-2.0.4.tgz}
@@ -677,7 +578,7 @@ packages:
   /is-callable/1.2.3:
     resolution: {integrity: sha1-ix4FALc6HXbHBIdjbzaOUZ3o244=, tarball: is-callable/download/is-callable-1.2.3.tgz}
     engines: {node: '>= 0.4'}
-    dev: false
+    dev: true
 
   /is-docker/2.2.1:
     resolution: {integrity: sha1-M+6r4jz+hvFL3kQIoCwM+4U6zao=, tarball: is-docker/download/is-docker-2.2.1.tgz}
@@ -705,25 +606,12 @@ packages:
   /is-negative-zero/2.0.1:
     resolution: {integrity: sha1-PedGwY3aIxkkGlNnWQjY92bxHCQ=, tarball: is-negative-zero/download/is-negative-zero-2.0.1.tgz}
     engines: {node: '>= 0.4'}
-    dev: false
+    dev: true
 
   /is-number/7.0.0:
     resolution: {integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=, tarball: is-number/download/is-number-7.0.0.tgz}
     engines: {node: '>=0.12.0'}
     dev: true
-
-  /is-regex/1.1.3:
-    resolution: {integrity: sha512-qSVXFz28HM7y+IWX6vLCsexdlvzT1PJNFSBuaQLQ5o0IEw8UDYW6/2+eCMVyIsbM8CNLX2a/QWmSpyxYEHY7CQ==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      call-bind: 1.0.2
-      has-symbols: 1.0.2
-    dev: false
-
-  /is-string/1.0.6:
-    resolution: {integrity: sha512-2gdzbKUuqtQ3lYNrUTQYoClPhm7oQu4UdpSZMp1/DGgkHBT8E2Z1l0yMdb6D4zNAxwDiMv8MdulKROJGNl0Q0w==}
-    engines: {node: '>= 0.4'}
-    dev: false
 
   /is-what/3.14.1:
     resolution: {integrity: sha1-4SIvRt3ahd6tD9HJ3xMXYOd3VcE=, tarball: is-what/download/is-what-3.14.1.tgz}
@@ -749,10 +637,6 @@ packages:
   /json-parse-even-better-errors/2.3.1:
     resolution: {integrity: sha1-fEeAWpQxmSjgV3dAXcEuH3pO4C0=, tarball: json-parse-even-better-errors/download/json-parse-even-better-errors-2.3.1.tgz}
     dev: true
-
-  /json-schema-traverse/0.4.1:
-    resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
-    dev: false
 
   /json5/2.2.0:
     resolution: {integrity: sha1-Lf7+cgxrpSXZ69kJlQ8FFTFsiaM=, tarball: json5/download/json5-2.2.0.tgz}
@@ -792,10 +676,6 @@ packages:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=, tarball: lines-and-columns/download/lines-and-columns-1.1.6.tgz}
     dev: true
 
-  /lodash-es/4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: false
-
   /lodash.toarray/4.4.0:
     resolution: {integrity: sha1-JMS/zWsvuji/0FlNsRedjptlZWE=, tarball: lodash.toarray/download/lodash.toarray-4.4.0.tgz}
     dev: true
@@ -813,7 +693,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: registry.nlark.com/js-tokens/4.0.0
-    dev: false
 
   /lower-case/2.0.2:
     resolution: {integrity: sha1-b6I3xj29xKgsoP2ILkci3F5jTig=, tarball: lower-case/download/lower-case-2.0.2.tgz}
@@ -913,11 +792,6 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=, tarball: object-assign/download/object-assign-4.1.1.tgz}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /object-inspect/1.10.3:
-    resolution: {integrity: sha512-e5mCJlSH7poANfC8z8S9s9S2IN5/4Zb3aZ33f5s8YqoazCFzNLloLU8r5VCG+G7WoqLvAAZoVMcy3tp/3X0Plw==}
-    dev: false
 
   /object-is/1.1.5:
     resolution: {integrity: sha1-ud7qpfx/GEag+uzc7sE45XePU6w=, tarball: object-is/download/object-is-1.1.5.tgz}
@@ -925,12 +799,12 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.3
-    dev: false
+    dev: true
 
   /object-keys/1.1.1:
     resolution: {integrity: sha1-HEfyct8nfzsdrwYWd9nILiMixg4=, tarball: object-keys/download/object-keys-1.1.1.tgz}
     engines: {node: '>= 0.4'}
-    dev: false
+    dev: true
 
   /object.assign/4.1.2:
     resolution: {integrity: sha1-DtVKNC7Os3s4/3brgxoOeIy2OUA=, tarball: object.assign/download/object.assign-4.1.2.tgz}
@@ -940,25 +814,7 @@ packages:
       define-properties: 1.1.3
       has-symbols: 1.0.2
       object-keys: 1.1.1
-    dev: false
-
-  /object.entries/1.1.4:
-    resolution: {integrity: sha512-h4LWKWE+wKQGhtMjZEBud7uLGhqyLwj8fpHOarZhD2uY3C9cRtk57VQ89ke3moByLXMedqs3XCHzyb4AmA2DjA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      call-bind: 1.0.2
-      define-properties: 1.1.3
-      es-abstract: 1.18.3
-    dev: false
-
-  /object.values/1.1.4:
-    resolution: {integrity: sha512-TnGo7j4XSnKQoK3MfvkzqKCi0nVe/D9I9IjwTNYdb/fxYHpjrluHVOgw0AF6jrRFGMPHdfuidR09tIDiIvnaSg==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      call-bind: 1.0.2
-      define-properties: 1.1.3
-      es-abstract: 1.18.3
-    dev: false
+    dev: true
 
   /once/1.4.0:
     resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=, tarball: once/download/once-1.4.0.tgz}
@@ -1056,31 +912,17 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /prop-types-exact/1.2.0:
-    resolution: {integrity: sha512-K+Tk3Kd9V0odiXFP9fwDHUYRyvK3Nun3GVyPapSIs5OBkITAm15W0CPFD/YKTkMUAbc0b9CUwRQp2ybiBIq+eA==}
-    dependencies:
-      has: 1.0.3
-      object.assign: 4.1.2
-      reflect.ownkeys: 0.2.0
-    dev: false
-
   /prop-types/15.7.2:
     resolution: {integrity: sha1-UsQedbjIfnK52TYOAga5ncv/psU=, tarball: prop-types/download/prop-types-15.7.2.tgz}
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: registry.nlark.com/react-is/16.13.1
-    dev: false
 
   /prr/1.0.1:
     resolution: {integrity: sha1-0/wRS6BplaRexok/SEzrHXj19HY=, tarball: prr/download/prr-1.0.1.tgz}
     dev: true
     optional: true
-
-  /punycode/2.1.1:
-    resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
-    engines: {node: '>=6'}
-    dev: false
 
   /purgecss/4.0.3:
     resolution: {integrity: sha1-gUe0KfnAnbcZ4F1kkI6otnKRN0I=, tarball: purgecss/download/purgecss-4.0.3.tgz}
@@ -1105,40 +947,6 @@ packages:
     resolution: {integrity: sha1-B0LpmkplUvRF1z4+4DKK8P8e3jk=, tarball: raf/download/raf-3.4.1.tgz}
     dependencies:
       performance-now: 2.1.0
-    dev: false
-
-  /react-bnb-gallery-lodash-es/1.4.5_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-xYBUJ+HBDMsp5MYW4uOs9i2nP2Ck33uDhQ8kxr/GuJbBGELDE0h8M5BslBqwno4Ku4WC6w36BGJjSYh3jcxgxg==}
-    peerDependencies:
-      react: ^15.0.0 || ^16.0.0
-      react-dom: ^15.0.0 || ^16.0.0
-    dependencies:
-      airbnb-prop-types: 2.16.0_react@17.0.2
-      ajv: 6.12.6
-      classnames: 2.3.1
-      focus-trap-react: 7.0.1_9bdd65c2b60ce8638444b80b396a481b
-      lodash-es: 4.17.21
-      object.assign: 4.1.2
-      object.values: 1.1.4
-      prop-types: 15.7.2
-      react: registry.nlark.com/react/17.0.2
-      react-dom: registry.nlark.com/react-dom/17.0.2_react@17.0.2
-      react-portal: 4.2.1_react@17.0.2
-    optionalDependencies:
-      typescript: 3.9.10
-    dev: false
-
-  /react-is/16.13.1:
-    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: false
-
-  /react-portal/4.2.1_react@17.0.2:
-    resolution: {integrity: sha512-fE9kOBagwmTXZ3YGRYb4gcMy+kSA+yLO0xnPankjRlfBv4uCpFXqKPfkpsGQQR15wkZ9EssnvTOl1yMzbkxhPQ==}
-    peerDependencies:
-      react: ^15.0.0-0 || ^16.0.0-0 || ^17.0.0-0
-    dependencies:
-      prop-types: 15.7.2
-      react: registry.nlark.com/react/17.0.2
     dev: false
 
   /react-router/5.2.0_react@17.0.2:
@@ -1172,10 +980,6 @@ packages:
       css-unit-converter: 1.1.2
       postcss-value-parser: 3.3.1
     dev: true
-
-  /reflect.ownkeys/0.2.0:
-    resolution: {integrity: sha1-dJrO7H8/34tj+SegSAnpDFwLNGA=}
-    dev: false
 
   /regenerator-runtime/0.13.7:
     resolution: {integrity: sha1-ysLazIoepnX+qrrriugziYrkb1U=, tarball: regenerator-runtime/download/regenerator-runtime-0.13.7.tgz}
@@ -1303,14 +1107,14 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.3
-    dev: false
+    dev: true
 
   /string.prototype.trimstart/1.0.4:
     resolution: {integrity: sha1-s2OZr0qymZtMnGSL16P7K7Jv7u0=, tarball: string.prototype.trimstart/download/string.prototype.trimstart-1.0.4.tgz}
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.3
-    dev: false
+    dev: true
 
   /strip-ansi/6.0.0:
     resolution: {integrity: sha1-CxVx3XZpzNTz4G4U7x7tJiJa5TI=, tarball: strip-ansi/download/strip-ansi-6.0.0.tgz}
@@ -1322,10 +1126,6 @@ packages:
   /svg-parser/2.0.4:
     resolution: {integrity: sha1-/cLinhOVFzYUC3bLEiyO5mMOtrU=, tarball: svg-parser/download/svg-parser-2.0.4.tgz}
     dev: true
-
-  /tabbable/4.0.0:
-    resolution: {integrity: sha512-H1XoH1URcBOa/rZZWxLxHCtOdVUEev+9vo5YdYhC9tCY4wnybX+VQrCYuy9ubkg69fCBxCONJOSLGfw0DWMffQ==}
-    dev: false
 
   /throttle-debounce/2.3.0:
     resolution: {integrity: sha1-/TGGXmZQIHHkEYF+JBRls+nDcuI=, tarball: throttle-debounce/download/throttle-debounce-2.3.0.tgz}
@@ -1359,13 +1159,6 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /typescript/3.9.10:
-    resolution: {integrity: sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
-    dev: false
-    optional: true
-
   /unbox-primitive/1.0.1:
     resolution: {integrity: sha1-CF4hViXsMWJXTciFmr7nilmxRHE=, tarball: unbox-primitive/download/unbox-primitive-1.0.1.tgz}
     dependencies:
@@ -1373,7 +1166,7 @@ packages:
       has-bigints: 1.0.1
       has-symbols: 1.0.2
       which-boxed-primitive: 1.0.2
-    dev: false
+    dev: true
 
   /universalify/2.0.0:
     resolution: {integrity: sha1-daSYTv7cSwiXXFrrc/Uw0C3yVxc=, tarball: universalify/download/universalify-2.0.0.tgz}
@@ -1392,12 +1185,6 @@ packages:
       tslib: registry.nlark.com/tslib/2.3.0
     dev: true
 
-  /uri-js/4.4.1:
-    resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
-    dependencies:
-      punycode: 2.1.1
-    dev: false
-
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=, tarball: util-deprecate/download/util-deprecate-1.0.2.tgz}
     dev: true
@@ -1414,7 +1201,7 @@ packages:
       is-number-object: registry.nlark.com/is-number-object/1.0.5
       is-string: registry.nlark.com/is-string/1.0.6
       is-symbol: registry.nlark.com/is-symbol/1.0.4
-    dev: false
+    dev: true
 
   /wrap-ansi/7.0.0:
     resolution: {integrity: sha1-Z+FFz/UQpqaYS98RUpEdadLrnkM=, tarball: wrap-ansi/download/wrap-ansi-7.0.0.tgz}
@@ -1428,6 +1215,7 @@ packages:
   /xtend/4.0.2:
     resolution: {integrity: sha1-u3J3n1+kZRhrH0OPZ0+jR/2121Q=, tarball: xtend/download/xtend-4.0.2.tgz}
     engines: {node: '>=0.4'}
+    dev: true
 
   /y18n/5.0.8:
     resolution: {integrity: sha1-f0k00PfKjFb5UxSTndzS3ZHOHVU=, tarball: y18n/download/y18n-5.0.8.tgz}
@@ -1873,7 +1661,7 @@ packages:
       prop-types-exact: registry.nlark.com/prop-types-exact/1.2.0
       react: registry.nlark.com/react/17.0.2
       react-is: registry.nlark.com/react-is/16.13.1
-    dev: false
+    dev: true
 
   registry.nlark.com/animejs/2.2.0:
     resolution: {integrity: sha1-Ne79/FNbgZScnLBvCz5gwC5v3IA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/animejs/download/animejs-2.2.0.tgz}
@@ -1906,7 +1694,7 @@ packages:
     dependencies:
       define-properties: 1.1.3
       es-abstract: registry.nlark.com/es-abstract/1.18.3
-    dev: false
+    dev: true
 
   registry.nlark.com/autoprefixer/10.2.6_postcss@8.3.5:
     resolution: {integrity: sha1-qt2ew04cmNQD4BlQA4BJ8OslKUk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/autoprefixer/download/autoprefixer-10.2.6.tgz}
@@ -2081,7 +1869,7 @@ packages:
       string.prototype.trimend: 1.0.4
       string.prototype.trimstart: 1.0.4
       unbox-primitive: 1.0.1
-    dev: false
+    dev: true
 
   registry.nlark.com/es-module-lexer/0.6.0:
     resolution: {integrity: sha1-5yqwW3QS5iub43w3oJvbYADXBvA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/es-module-lexer/download/es-module-lexer-0.6.0.tgz}
@@ -2182,13 +1970,13 @@ packages:
       define-properties: 1.1.3
       es-abstract: registry.nlark.com/es-abstract/1.18.3
       functions-have-names: registry.nlark.com/functions-have-names/1.2.2
-    dev: false
+    dev: true
 
   registry.nlark.com/functions-have-names/1.2.2:
     resolution: {integrity: sha1-mNk5kcOdqTYfjlCzN8T25B8SDiE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/functions-have-names/download/functions-have-names-1.2.2.tgz}
     name: functions-have-names
     version: 1.2.2
-    dev: false
+    dev: true
 
   registry.nlark.com/glob-parent/5.1.2:
     resolution: {integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/glob-parent/download/glob-parent-5.1.2.tgz}
@@ -2264,7 +2052,7 @@ packages:
     resolution: {integrity: sha1-/7OBRCUDI1rSReqJ5Fs9v/BA7lo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-bigint/download/is-bigint-1.0.2.tgz}
     name: is-bigint
     version: 1.0.2
-    dev: false
+    dev: true
 
   registry.nlark.com/is-boolean-object/1.1.1:
     resolution: {integrity: sha1-PAh48DXLghIo01DS4eNnGXFqPeg=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-boolean-object/download/is-boolean-object-1.1.1.tgz}
@@ -2273,7 +2061,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-    dev: false
+    dev: true
 
   registry.nlark.com/is-core-module/2.4.0:
     resolution: {integrity: sha1-jp/I4VAnsBFBgCbpjw5vTYYwXME=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-core-module/download/is-core-module-2.4.0.tgz}
@@ -2288,14 +2076,14 @@ packages:
     name: is-date-object
     version: 1.0.4
     engines: {node: '>= 0.4'}
-    dev: false
+    dev: true
 
   registry.nlark.com/is-number-object/1.0.5:
     resolution: {integrity: sha1-bt+u7XlQz/Ga/tzp+/yp7m3Sies=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-number-object/download/is-number-object-1.0.5.tgz}
     name: is-number-object
     version: 1.0.5
     engines: {node: '>= 0.4'}
-    dev: false
+    dev: true
 
   registry.nlark.com/is-regex/1.1.3:
     resolution: {integrity: sha1-0Cn5r/ZEi5Prvj8z2scVEf3L758=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-regex/download/is-regex-1.1.3.tgz?cache=0&sync_timestamp=1620454590565&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fis-regex%2Fdownload%2Fis-regex-1.1.3.tgz}
@@ -2305,14 +2093,14 @@ packages:
     dependencies:
       call-bind: 1.0.2
       has-symbols: 1.0.2
-    dev: false
+    dev: true
 
   registry.nlark.com/is-string/1.0.6:
     resolution: {integrity: sha1-P+XVmS+w2TQE8yWE1LAXmnG1Sl8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-string/download/is-string-1.0.6.tgz}
     name: is-string
     version: 1.0.6
     engines: {node: '>= 0.4'}
-    dev: false
+    dev: true
 
   registry.nlark.com/is-symbol/1.0.4:
     resolution: {integrity: sha1-ptrJO2NbBjymhyI23oiRClevE5w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-symbol/download/is-symbol-1.0.4.tgz}
@@ -2321,7 +2109,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       has-symbols: 1.0.2
-    dev: false
+    dev: true
 
   registry.nlark.com/js-tokens/4.0.0:
     resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/js-tokens/download/js-tokens-4.0.0.tgz}
@@ -2380,7 +2168,7 @@ packages:
     resolution: {integrity: sha1-wqp9LQn1DJk3VwT3oK3yTFeC02k=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/object-inspect/download/object-inspect-1.10.3.tgz}
     name: object-inspect
     version: 1.10.3
-    dev: false
+    dev: true
 
   registry.nlark.com/object.entries/1.1.4:
     resolution: {integrity: sha1-Q8z5pQvF/VtknUWrGlefJOCIyv0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/object.entries/download/object.entries-1.1.4.tgz}
@@ -2391,7 +2179,7 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.1.3
       es-abstract: registry.nlark.com/es-abstract/1.18.3
-    dev: false
+    dev: true
 
   registry.nlark.com/open/7.4.2:
     resolution: {integrity: sha1-uBR+Jtzz5CYxbHMAif1x7dKcIyE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/open/download/open-7.4.2.tgz}
@@ -2474,7 +2262,7 @@ packages:
       has: 1.0.3
       object.assign: 4.1.2
       reflect.ownkeys: registry.nlark.com/reflect.ownkeys/0.2.0
-    dev: false
+    dev: true
 
   registry.nlark.com/react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz}
@@ -2509,7 +2297,6 @@ packages:
     resolution: {integrity: sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/react-is/download/react-is-16.13.1.tgz}
     name: react-is
     version: 16.13.1
-    dev: false
 
   registry.nlark.com/react-masonry-css/1.0.16_react@17.0.2:
     resolution: {integrity: sha1-crKLSuNITiUFNHAIYFl1U6EPGiw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/react-masonry-css/download/react-masonry-css-1.0.16.tgz}
@@ -2581,14 +2368,6 @@ packages:
       throttle-debounce: 2.3.0
     dev: false
 
-  registry.nlark.com/react-viewer/3.2.2:
-    resolution: {integrity: sha1-OGJqf6hi7ITfo3PC71hD9BAMRls=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/react-viewer/download/react-viewer-3.2.2.tgz}
-    name: react-viewer
-    version: 3.2.2
-    dependencies:
-      classnames: 2.3.1
-    dev: false
-
   registry.nlark.com/react/17.0.2:
     resolution: {integrity: sha1-0LXMUW0p6z7uOD91tihkz7aAADc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/react/download/react-17.0.2.tgz}
     name: react
@@ -2603,7 +2382,7 @@ packages:
     resolution: {integrity: sha1-dJrO7H8/34tj+SegSAnpDFwLNGA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/reflect.ownkeys/download/reflect.ownkeys-0.2.0.tgz}
     name: reflect.ownkeys
     version: 0.2.0
-    dev: false
+    dev: true
 
   registry.nlark.com/rollup-plugin-visualizer/5.5.1:
     resolution: {integrity: sha1-y6TqxIouMjfNFyQT0zl2vmTlSr4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/rollup-plugin-visualizer/download/rollup-plugin-visualizer-5.5.1.tgz}
