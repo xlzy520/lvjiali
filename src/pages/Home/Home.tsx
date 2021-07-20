@@ -13,18 +13,13 @@ import {Button, Container, PhotoGrid, Spacing, Text, Title,} from '../../compone
 const AV = window.AV
 
 const Home = () => {
-  const [galleryStatus, setGalleryStatus] = useState({
-    isOpen: false,
-    currentPhoto: null,
-  });
-
   const [photos, setPhotos] = useState([]);
-  const [number, setNumber] = useState(0);
   const [gallery, setGallery] = useState({});
   const [ButtonState, setButtonState] = useState({
     hidden: false,
     animating: false
   });
+  const [photoNodeList, setPhotoNodeList] = useState([]);
 
 
   useEffect(() => {
@@ -36,24 +31,23 @@ const Home = () => {
         // thumbnail: v.attributes.url+'?x-oss-process=style/thum',
       }))
       setPhotos(_items)
-      // setGallery(new Viewer(document.querySelector('.my-masonry-grid', {
-      //   url: 'data-src'
-      // })))
+      setGallery(new Viewer(document.querySelector('.my-masonry-grid', {
+        url: 'data-src'
+      })))
+      const allImgNodeList = document.querySelectorAll('.my-masonry-grid img')
+      setPhotoNodeList(allImgNodeList)
+
     });
   }, [])
 
   const onPhotoPress = useCallback((url) => {
-    const allImgNodeList = document.querySelectorAll('.my-masonry-grid img')
     let targetIndex = 0
-    allImgNodeList.forEach((v,index)=> {
+    photoNodeList.forEach((v,index)=> {
       if (v.src === url) {
         targetIndex = index
       }
     })
-    new Viewer(allImgNodeList[targetIndex], {
-      url: 'data-src'
-    }).show()
-    setNumber(targetIndex)
+    gallery.show(targetIndex)
   }, [photos, gallery]);
 
   const onCommentClick = useCallback(() => {
@@ -65,12 +59,6 @@ const Home = () => {
 
   const onAnimationComplete = useCallback(() => {
     history.push('talk')
-  }, []);
-
-  const onBrowse = useCallback(() => {
-    new Viewer(document.querySelector('.my-masonry-grid', {
-      url: 'data-src'
-    })).show()
   }, []);
 
   const history = useHistory()
@@ -94,20 +82,9 @@ const Home = () => {
         <Container className="actions">
           <Spacing right={2}>
             <Button
-              onPress={onBrowse}
+              onPress={goUploadPage}
               className="mt-4 mb-6"
               primary
-              large
-            >
-              查看照片墙
-              </Button>
-          </Spacing>
-          <Spacing left={2}>
-            <Button
-              className="mt-4 mb-6"
-              onPress={goUploadPage}
-              secondary
-              outline
               large
             >
               上传我们的照片
@@ -126,7 +103,7 @@ const Home = () => {
                 button button__default button__large button__primary button__comment"
                 onClick={onCommentClick}
               >
-                留言
+                去留言吧
               </button>
             </ParticleEffectButton>
           </Spacing>
