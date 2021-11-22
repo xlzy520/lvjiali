@@ -6,4 +6,4 @@
 Vite+React+Viewer.js+Valine
 
 ### Live Demo
-[demo](https://xlzy520.cn/4class-jiali)
+[demo](https://xiaojuzi.fun/lvjiali)
