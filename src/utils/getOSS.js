@@ -7,7 +7,7 @@ const accessKeySecret = 'w8JTHC5vwgDdBNX'+'lzy'+'xuajXsHd0nJm18d'
 
 export const OSSClient = new OSS({
   region: 'oss-cn-shenzhen',
-  accessKeyId: accessKeyId.replace('lzy', ''),
-  accessKeySecret: accessKeySecret.replace('lzy', ''),
+  accessKeyId: ['LTAIUVq', 'GhhJkpW23'].join(''),
+  accessKeySecret: ['w8JTHC5vwgDdBNX', 'xuajXsHd0nJm18d'].join(''),
   bucket: 'jiali0126'
 });
