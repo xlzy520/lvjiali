@@ -34,7 +34,7 @@ const htmlPlugin = () => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/4class-jiali/',
+  // base: '/4class-jiali/',
   // base: 'https://cdn.jsdelivr.net/gh/xlzy520/4class-jiali/@gh-pages/',
   server: {
     port: 9927,
@@ -54,7 +54,7 @@ export default defineConfig({
   plugins: [
     reactRefresh(),
     svgr(),
-    htmlPlugin(),
+    // htmlPlugin(),
     visualizer()
   ]
 })
